@@ -9,6 +9,7 @@ submitButton.addEventListener("click",()=>{
         const button = document.createElement('button');
         button.textContent = hexValue
         button.className="button"
+        button.style.backgroundColor = button.textContent
         button.addEventListener("click",()=>{
             body.style.backgroundColor = button.textContent
         });
