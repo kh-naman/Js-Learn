@@ -85,3 +85,37 @@ function attachDragEventsToTaskContainer(target)
     })
 }
 
+const themeToggleButton = document.getElementById("theme-toggle")
+themeToggleButton.addEventListener("click",()=>{
+    
+    if(themeToggleButton.innerText === "🌙 Dark Mode")
+    {
+        themeToggleButton.innerText = "☀️ Light Mode"
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        
+        addBorderOnAllTasks("white")
+    }
+    else{
+        themeToggleButton.innerText = "🌙 Dark Mode"
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        addBorderOnAllTasks("black")
+    }
+    
+})
+
+function allTasks() {
+    return document.querySelectorAll(".task-container");
+}
+function addBorderOnAllTasks(color)
+{
+    const allTasksInDom = allTasks()
+    if(allTasksInDom === null)
+    {
+        return;
+    }
+    allTasksInDom.forEach((tasks) =>{
+        tasks.style.border = `2px solid ${color}`;
+    })
+}
