@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban board</title>
+    <link rel="stylesheet" href="kanban.css">
+</head>
+<body>
+    <h1>Kanban Board</h1>
+    <div class="main-containers">
+       
+        <div id="task-button-container">
+            
+            <select id="category">
+                <option value="" disabled selected>Category</option>
+                
+            </select>
+            <input type="text" id= "task-description" placeholder="Description">
+            <button id="create-task-button">Create Task</button>
+        </div>
+
+        <div id="board-button-container">
+            <input type="text" name="" placeholder="Enter board heading" id="board-description">
+            <button id="create-board-button">Create board</button>
+        </div>
+
+        <div id="theme-mode-container">
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+        
+    </div>
+
+
+    <script src="kanban.js"></script>
+</body>
+</html>
